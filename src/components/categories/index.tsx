@@ -16,7 +16,6 @@ type Props = {
 };
 
 export function Categories({ data, selected, onSelect }: Props) {
-  console.log(data);
   return (
     <FlatList
       contentContainerStyle={s.content}
