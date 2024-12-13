@@ -54,7 +54,6 @@ export default function Market() {
   const getCoupon = async (id: string) => {
     try {
       setIsFetchingCoupon(true);
-      console.log(id);
       const { data } = await api.patch(`/coupons/${id}`);
 
       Alert.alert("Coupon", data.coupon);
@@ -69,6 +68,14 @@ export default function Market() {
 
   const handleUseCoupon = (id: string) => {
     setIsVisibleCameraModal(false);
+
+    if (id !== params.id) {
+      Alert.alert(
+        "Coupon",
+        "Este cupom não pode ser utilizado para este estabelecimento"
+      );
+      return;
+    }
 
     Alert.alert(
       "Cupom",
