@@ -15,6 +15,7 @@ type MarketsProps = PlaceProps & {
 };
 
 const DEFAULT_ZOOM = 0.01;
+const USE_USER_LOCATION = process.env.EXPO_PUBLIC_USER_LOCATION === "true";
 
 export default function Home() {
   const [categories, setCategories] = useState<CategoriesProps>([]);
@@ -68,7 +69,7 @@ export default function Home() {
 
   useEffect(() => {
     // Set the user's current location on the map
-    // getCurrentLocation();
+    if (USE_USER_LOCATION) getCurrentLocation();
 
     fetchCategories();
   }, []);
