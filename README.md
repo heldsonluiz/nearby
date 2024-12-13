@@ -1,4 +1,3 @@
-
 <p align="center"><img src="https://raw.githubusercontent.com/heldsonluiz/nearby/refs/heads/main/assets/prints/Thumbnail.png" alt="Nearby App thumbnail"></p>
 
 # Nearby
@@ -10,59 +9,94 @@
 ![image](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
 ![image](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
 
-Nearby é um aplicativo mobile de clube de benefícios com cupons para utilizar em estabelecimentos próximos a você.
-Esse é o projeto do evento NLW Pocket Mobile, um dos conteúdos disponíveis para alunos da Rocketseat.
+**Nearby** é um aplicativo mobile que conecta você aos melhores benefícios e descontos disponíveis em estabelecimentos próximos à sua localização.
 
-O projeto realizado foi o desenvolvimento de uma aplicação mobile em React Native, aplicação dos conceitos de Propriedades, Estados e Componentes, tipagem com Typescript, Expo Framework, interface com StyleSheet, roteamento por arquivos com Expo Router, consumo de API Node.js, Bottom Sheet, leitura de QRCode com câmera, exibição de mapa.
+Este projeto foi desenvolvido durante o evento **NLW Pocket Mobile** da **Rocketseat** e apresenta funcionalidades modernas como leitura de QR Codes, integração com APIs e exibição de mapas interativos.
 
-<p>&nbsp</p>
+---
 
-## Setup
-### Requisistos
-- [Node (> 20)](https://nodejs.org/)
-- [Expo Go](https://expo.dev/go])
+## **Funcionalidades**
 
-<p>&nbsp</p>
+- Lista de estabelecimentos próximos com cupons de desconto.
+- Filtros por categorias para facilitar a busca.
+- Exibição de mapa interativo com localização de estabelecimentos.
+- Leitura de QR Codes para consumir cupons diretamente no local.
+- Integração com APIs para busca de dados em tempo real.
+- Suporte à configuração de localização personalizada.
 
-## Rodando
-### API
-Para exibir as listas de estabelecimentos, cupons e realizar o consumo dos cupons o aplicativo realiza comunicação com uma API, e para que possa ser usado localmente, é necessário que o usuário siga os seguintes passos:
-  - Descompactar a pasta 'api.zip' em uma pasta separada
-  - Dentro da pasta da API, abrir um terminal e executar
-    ```bash
-      npm i
-      npm start
-    ```
-  - Atualizar a variável 'EXPO_PUBLIC_API_URL' dentro o arquivo '.env' para contar o IP da máquina aonde a API está rodando
-
-<p>&nbsp</p>
-
-### Mobile
-O projeto foi desenvolvido utilizando o framework [Expo](https://expo.dev/) e portanto pode ser visualizado tanto em aparelhos físicos quanto emuladores. Acesse o site do framework para entender qual a melhor opção. Aqui, seguiremos com o Expo Go
-
-Para a visualização do projeto em um aparelho físico é necessário que o usuário baixe o aplicativo Expo Go na loja de aplicativos correspondente ao seu aparelho.
-
-Com o aplicativo já instalado e a variável de ambiente da API configurada corretamente, o usuário poderá rodar e visualizar o projeto seguindo os passos abaixo:
-  - Dentro da pasta do mobile, abrir um terminal e executar
-  ```bash
-    npm i
-    npx expo start
-  ```
-  - O comando gerará um QR Code que ao ser escaneado pelo dispositivo físico abrirá o aplicativo no Expo Go
-
-<p>&nbsp</p>
-
-> OBS: O projeto pode ser configurado para utilizar a localização atual do usuário configurando a variável 'EXPO_PUBLIC_USER_LOCATION=true' dentro do arquivo .env, porém, os dados de exemplo na API estão configurados para uma localizaçẽo específica, portanto ao usar a localização do usuário, pode não ser exibidos estabelecimentos próximos. Para que os estabelecimentos próximos ao usuário sejam exibidos ao utilizar sua localização, é necessário cadastrar locais na API que sejam próximos ao local de testes.
-
-<p>&nbsp</p>
-
-## Utilizando
 <p align="center">
 <img src="https://raw.githubusercontent.com/heldsonluiz/nearby/refs/heads/main/assets/prints/Project.png" alt="Nearby App Screens Thumbnail">
 </p>
 
-- Ao abrir o aplicativo, o usuário é direcionado para uma tela de boas vindas com um pequeno tutorial;
-- Ao avançar, é exibida uma lista de locais próximos ao usuário que pode ser filtrada por categorias que são exibidas no topo da tela;
-- O usuário pode clicar em um 'pin' no mapa referente a um estabelecimento exibir o nome e endereço do estabelecimento;
-- Ao clicar nas informações exibidas ou em um card na listagem de estabelecimentos, o usuário é redirecionado para a tela de detalhes do estabelecimento;
-- Nesta tela, o usuário visualizará mais detalhes do estabelecimento e pode consumir um dos cupons disponíveis fazendo o uso da câmera para escanear um QR Code (que ficaria disponível no estabelecimento);
+---
+
+## **Setup**
+
+### **Requisitos**
+
+- [Node.js (> 20)](https://nodejs.org/)
+- [Expo Go](https://expo.dev/client)
+
+### **Instalação**
+
+1. Certifique-se de que o Node.js está instalado em sua máquina.
+2. Instale o Expo CLI globalmente executando:
+   ```bash
+   npm install -g expo-cli
+   ```
+3. Baixe e instale o aplicativo **Expo Go** na loja de aplicativos do seu dispositivo.
+
+---
+
+## **Como Rodar o Projeto**
+
+### **API**
+
+Para exibir a lista de estabelecimentos e cupons, é necessário configurar e rodar a API localmente:
+
+1. Descompacte a pasta `api.zip` em um diretório separado.
+2. Abra o terminal na pasta da API e execute os comandos:
+   ```bash
+   npm install
+   npm start
+   ```
+3. Atualize a variável `EXPO_PUBLIC_API_URL` no arquivo `.env` com o IP da máquina onde a API está rodando.
+
+### **Mobile**
+
+O projeto foi desenvolvido utilizando o framework [Expo](https://expo.dev/). Para rodá-lo:
+
+1. Navegue até a pasta do projeto mobile e execute:
+   ```bash
+   npm install
+   npx expo start
+   ```
+2. Escaneie o QR Code gerado com o aplicativo **Expo Go** em seu dispositivo.
+
+> **Nota:** Para habilitar a funcionalidade de localização atual do usuário, configure `EXPO_PUBLIC_USER_LOCATION=true` no arquivo `.env`. Caso contrário, serão exibidos dados de exemplo de uma localização padrão.
+
+---
+
+## **Utilização**
+
+1. Ao abrir o aplicativo, você verá uma tela de boas-vindas com um pequeno tutorial.
+2. Navegue pela lista de estabelecimentos próximos, filtrando por categorias no topo da tela.
+3. Clique em um estabelecimento no mapa para visualizar informações detalhadas.
+4. Na tela de detalhes, consuma cupons disponíveis escaneando o QR Code do estabelecimento.
+
+---
+
+## **Licença**
+
+Este projeto está licenciado sob a licença MIT. Para mais informações, leia o arquivo [LICENSE](LICENSE).
+
+---
+
+## **Contato**
+
+Dúvidas ou sugestões? Entre em contato:
+
+- **E-mail:** heldsonluiz@gmail.com
+- **LinkedIn:** [Heldson Luiz](https://linkedin.com/in/heldsonluiz)
+
+---
