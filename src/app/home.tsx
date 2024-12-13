@@ -1,15 +1,14 @@
-import { api } from "@/services/api";
-import { useEffect, useState } from "react";
-import { Alert, View, Text } from "react-native";
-
 import { Categories, CategoriesProps } from "@/components/categories";
 import { PlaceProps } from "@/components/place";
 import { Places } from "@/components/places";
-
-import MapView, { Callout, Marker } from "react-native-maps";
+import { api } from "@/services/api";
+import { colors, fontFamily } from "@/styles/theme";
 import * as Location from "expo-location";
+import { router } from "expo-router";
+import { useEffect, useState } from "react";
+import { Alert, Text, View } from "react-native";
+import MapView, { Callout, Marker } from "react-native-maps";
 
-import { fontFamily, colors } from "@/styles/theme"
 type MarketsProps = PlaceProps & {
   latitude: number;
   longitude: number;
@@ -112,10 +111,26 @@ export default function Home() {
               }}
               image={require("@/assets/pin.png")}
             >
-              <Callout>
+              <Callout onPress={() => router.navigate(`/market/${market.id}`)}>
                 <View>
-                  <Text style={{ fontSize: 14, color: colors.gray[600], fontFamily: fontFamily.medium}}>{market.name}</Text>
-                  <Text style={{ fontSize: 12, color: colors.gray[600], fontFamily: fontFamily.regular}}>{market.address}</Text>
+                  <Text
+                    style={{
+                      fontSize: 14,
+                      color: colors.gray[600],
+                      fontFamily: fontFamily.medium,
+                    }}
+                  >
+                    {market.name}
+                  </Text>
+                  <Text
+                    style={{
+                      fontSize: 12,
+                      color: colors.gray[600],
+                      fontFamily: fontFamily.regular,
+                    }}
+                  >
+                    {market.address}
+                  </Text>
                 </View>
               </Callout>
             </Marker>

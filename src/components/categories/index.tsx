@@ -1,7 +1,5 @@
-import { FlatList } from "react-native";
-
 import { Category } from "@/components/category";
-
+import { FlatList } from "react-native";
 import { s } from "./styles";
 
 export type CategoriesProps = {
@@ -11,8 +9,8 @@ export type CategoriesProps = {
 
 type Props = {
   data: CategoriesProps;
-  selected: string;
   onSelect: (id: string) => void;
+  selected: string;
 };
 
 export function Categories({ data, selected, onSelect }: Props) {

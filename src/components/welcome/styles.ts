@@ -1,22 +1,22 @@
-import { StyleSheet } from "react-native"
 import { colors, fontFamily } from "@/styles/theme"
+import { StyleSheet } from "react-native"
 
 export const s = StyleSheet.create({
   logo: {
-    width: 48,
     height: 48,
+    marginBottom: 28,
     marginTop: 24,
-    marginBottom: 28
+    width: 48,
   },
   title: {
-    fontSize: 24,
+    color: colors.gray[600],
     fontFamily: fontFamily.bold,
-    color: colors.gray[600]
+    fontSize: 24,
   },
   subtitle: {
-    fontSize: 16,
-    fontFamily: fontFamily.regular,
     color: colors.gray[500],
+    fontFamily: fontFamily.regular,
+    fontSize: 16,
     marginTop: 12
   }
 })

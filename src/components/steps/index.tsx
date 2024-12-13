@@ -1,13 +1,12 @@
-import { Text, View } from "react-native"
-import { IconMapPin, IconQrcode, IconTicket } from "@tabler/icons-react-native"
+import { IconMapPin, IconQrcode, IconTicket } from "@tabler/icons-react-native";
+import { Text, View } from "react-native";
+import { Step } from "../step";
+import { s } from "./styles";
 
-import { s } from "./styles"
-import { Step } from "../step"
-
-export function Steps () {
+export function Steps() {
   return (
-    <View style={ s.container }>
-      <Text style={ s.title }>Veja como funciona:</Text>
+    <View style={s.container}>
+      <Text style={s.title}>Veja como funciona:</Text>
 
       <Step
         icon={IconMapPin}
@@ -27,5 +26,5 @@ export function Steps () {
         description="Ative cupons onde estiver, em diferentes tipos de estabelecimento"
       />
     </View>
-  )
+  );
 }

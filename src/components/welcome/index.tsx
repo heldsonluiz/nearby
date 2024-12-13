@@ -1,8 +1,7 @@
-import { Image, Text, View } from 'react-native';
+import { Image, Text, View } from "react-native";
+import { s } from "./styles";
 
-import { s } from "./styles"
-
-export function Welcome () {
+export function Welcome() {
   return (
     <View>
       <Image source={require("@/assets/logo.png")} style={s.logo} />
@@ -12,5 +11,5 @@ export function Welcome () {
         seus estabelecimentos favoritos.
       </Text>
     </View>
-  )
+  );
 }

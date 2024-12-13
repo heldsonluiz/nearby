@@ -1,37 +1,37 @@
-import { StyleSheet } from "react-native"
 import { colors, fontFamily } from "@/styles/theme"
+import { StyleSheet } from "react-native"
 
 export const s = StyleSheet.create({
   container: {
-    height: 120,
-    width: "100%",
-    padding: 8,
-    borderWidth: 1,
+    alignItems: "center",
     borderColor: colors.gray[200],
     borderRadius: 12,
+    borderWidth: 1,
     flexDirection: "row",
     gap: 16,
-    alignItems: "center"
+    height: 120,
+    padding: 8,
+    width: "100%",
   },
   image: {
-    width: 116,
-    height: 104,
     backgroundColor: colors.gray[200],
-    borderRadius: 8
+    borderRadius: 8,
+    height: 104,
+    width: 116,
   },
   content: {
     flex: 1,
     gap: 4
   },
   name: {
-    fontSize: 14,
+    color: colors.gray[600],
     fontFamily: fontFamily.medium,
-    color: colors.gray[600]
+    fontSize: 14,
   },
   description: {
-    fontSize: 12,
+    color: colors.gray[500],
     fontFamily: fontFamily.regular,
-    color: colors.gray[500]
+    fontSize: 12,
   },
   footer: {
     flexDirection: "row",
@@ -39,8 +39,8 @@ export const s = StyleSheet.create({
     marginTop: 10
   },
   tickets: {
-    fontSize: 12,
+    color: colors.gray[400],
     fontFamily: fontFamily.regular,
-    color: colors.gray[400]
+    fontSize: 12,
   }
 })

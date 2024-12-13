@@ -1,24 +1,24 @@
-import { StyleSheet } from "react-native"
 import { colors, fontFamily } from "@/styles/theme"
+import { StyleSheet } from "react-native"
 
 export const s = StyleSheet.create({
   container: {
-    width: "100%",
     flexDirection: "row",
     gap: 16,
+    width: "100%",
   },
   details: {
     flex: 1,
   },
   title: {
-    fontSize: 16,
-    fontFamily: fontFamily.semiBold,
     color: colors.gray[600],
+    fontFamily: fontFamily.semiBold,
+    fontSize: 16,
   },
   description: {
+    color: colors.gray[500],
     fontFamily: fontFamily.regular,
     fontSize: 14,
-    color: colors.gray[500],
     marginTop: 4,
   }
 })
