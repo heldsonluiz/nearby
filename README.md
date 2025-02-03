@@ -1,4 +1,4 @@
-<p align="center"><img src="https://raw.githubusercontent.com/heldsonluiz/nearby/refs/heads/main/assets/prints/Thumbnail.png" alt="Nearby App thumbnail"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/heldsonluiz/nearby/refs/heads/main/assets/prints/thumbnail.png" alt="Nearby App thumbnail"></p>
 
 # Nearby
 
